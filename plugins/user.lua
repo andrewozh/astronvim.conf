@@ -1,12 +1,25 @@
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
+  {
+    "ellisonleao/gruvbox.nvim",
+    as = "gruvbox",
+    config = function()
+      require("gruvbox").setup({
+          undercurl = true,
+          underline = true,
+          bold = true,
+          italic = true,
+          strikethrough = true,
+          invert_selection = false,
+          invert_signs = false,
+          invert_tabline = true,
+          invert_intend_guides = false,
+          inverse = false, -- invert background for search, diffs, statuslines and errors
+          contrast = "soft", -- can be "hard", "soft" or empty string
+          palette_overrides = {},
+          overrides = {},
+          dim_inactive = false,
+          transparent_mode = false,
+      })
+    end,
+  },
 }
