@@ -21,7 +21,7 @@ return {
         border = {
           style = "rounded",
           text = {
-            top = " Settings ",
+            top = "",
           },
         },
       },
@@ -31,7 +31,7 @@ return {
           highlight = "FloatBorder",
           style = "rounded",
           text = {
-            top = " ChatGPT test",
+            top = "",
           },
         },
       },
@@ -42,7 +42,7 @@ return {
           style = "rounded",
           text = {
             top_align = "center",
-            top = " Prompt ",
+            top = "",
           },
         },
       },
