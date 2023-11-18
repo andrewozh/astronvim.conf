@@ -16,8 +16,7 @@ return {
         "hcl",
         "lua",
         "vim",
-        "markdown",
-        "help"
+        "markdown"
     })
   end,
 }
