@@ -36,6 +36,24 @@ return {
     ["<leader>fs"] = { "<cmd>SessionManager load_session<cr>", desc = "Search Sessions" },
     ["<leader>tk"] = { function() utils.toggle_term_cmd "k9s" end, desc = "ToggleTerm k9s" },
     ["<leader>tg"] = { "<cmd>ChatGPT<cr>", desc = "Toggle ChatGPT" },
+    -- zettelkasten 
+    ["<leader>z"] = { name = "Zettelkasten" },
+    ["<leader>zN"] = { function() vim.cmd('!zknew ' .. vim.fn.input('Name: ')) end, desc = "New note" },
+
+    ["<leader>za"] = { "<cmd>:Telescope find_files find_command=zkrg,area,-,-<cr>", desc = "Areas" },
+    ["<leader>zn"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,-<cr>", desc = "Notes" },
+    ["<leader>zr"] = { "<cmd>:Telescope find_files find_command=zkrg,-,resource,-<cr>", desc = "Resources" },
+    ["<leader>zP"] = { "<cmd>:Telescope find_files find_command=zkrg,project,-,-<cr>", desc = "Projects" },
+    ["<leader>zT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,-<cr>", desc = "Tasks" },
+    ["<leader>zp"] = { "<cmd>:Telescope find_files find_command=zkrg,project,progress,-<cr>", desc = "Projects in progress" },
+    ["<leader>zt"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,-<cr>", desc = "Tasks in progress" },
+    ["<leader>zc"] = { function() vim.cmd(':execute "Telescope find_files find_command=zkrg,-,-,".expand("%:t")') end, desc = "Ref" },
+
+    ["<leader>zi"] = { name = "Intento" },
+    ["<leader>zin"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,intento<cr>", desc = "Notes" },
+    ["<leader>ziT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,intento-kanban.md<cr>", desc = "Tasks" },
+    ["<leader>zit"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,intento-kanban.md<cr>", desc = "Tasks in progress" },
+    ["<leader>zib"] = { "<cmd>:Telescope find_files find_command=zkrg,task,backlog,intento-kanban.md<cr>", desc = "Tasks backlog" },
   },
   t = {
     -- setting a mapping to false will disable it
