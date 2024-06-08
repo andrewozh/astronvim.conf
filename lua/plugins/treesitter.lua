@@ -7,9 +7,20 @@ return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
+      "bash",
+      "regex",
+      "awk",
+      "python",
+      "javascript",
+      "go",
+      "yaml",
+      "json",
+      "terraform",
+      "dockerfile",
+      "hcl",
       "lua",
       "vim",
-      -- add more arguments for adding more treesitter parsers
+      "markdown"
     },
   },
 }
