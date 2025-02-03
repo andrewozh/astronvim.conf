@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -63,27 +63,27 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
-        ["<leader>b"] = { name = "Buffers" },
-        ["<leader>fs"] = { "<cmd>SessionManager load_session<cr>", desc = "Search Sessions" },
+        ["<Leader>fs"] = { "<cmd>SessionManager load_session<cr>", desc = "Search Sessions" },
 
         -- zettelkasten
-        ["<leader>z"] = { name = "Zettelkasten" },
-        ["<leader>zN"] = { function() vim.cmd('!zknew ' .. vim.fn.input('Name: ')) end, desc = "New note" },
+        ["<Leader>z"] = { desc = "Zettelkasten" },
+        ["<Leader>zN"] = { function() vim.cmd('!zknew ' .. vim.fn.input('Name: ')) end, desc = "New note" },
+        ["<Leader>zj"] = { function() vim.cmd('e ' .. vim.cmd('!jrnl')) end, desc = "Journal" },
 
-        ["<leader>za"] = { "<cmd>:Telescope find_files find_command=zkrg,area,-,-<cr>", desc = "Areas" },
-        ["<leader>zn"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,-<cr>", desc = "Notes" },
-        ["<leader>zr"] = { "<cmd>:Telescope find_files find_command=zkrg,-,resource,-<cr>", desc = "Resources" },
-        ["<leader>zP"] = { "<cmd>:Telescope find_files find_command=zkrg,project,-,-<cr>", desc = "Projects" },
-        ["<leader>zT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,-<cr>", desc = "Tasks" },
-        ["<leader>zp"] = { "<cmd>:Telescope find_files find_command=zkrg,project,progress,-<cr>", desc = "Projects in progress" },
-        ["<leader>zt"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,-<cr>", desc = "Tasks in progress" },
-        ["<leader>zc"] = { function() vim.cmd(':execute "Telescope find_files find_command=zkrg,-,-,".expand("%:t")') end, desc = "Ref" },
+        ["<Leader>za"] = { "<cmd>:Telescope find_files find_command=zkrg,area,-,-<cr>", desc = "Areas" },
+        ["<Leader>zn"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,-<cr>", desc = "Notes" },
+        ["<Leader>zr"] = { "<cmd>:Telescope find_files find_command=zkrg,-,resource,-<cr>", desc = "Resources" },
+        ["<Leader>zP"] = { "<cmd>:Telescope find_files find_command=zkrg,project,-,-<cr>", desc = "Projects" },
+        ["<Leader>zT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,-<cr>", desc = "Tasks" },
+        ["<Leader>zp"] = { "<cmd>:Telescope find_files find_command=zkrg,project,progress,-<cr>", desc = "Projects in progress" },
+        ["<Leader>zt"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,-<cr>", desc = "Tasks in progress" },
+        ["<Leader>zc"] = { function() vim.cmd(':execute "Telescope find_files find_command=zkrg,-,-,".expand("%:t")') end, desc = "Ref" },
 
-        ["<leader>zi"] = { name = "Intento" },
-        ["<leader>zin"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,intento<cr>", desc = "Notes" },
-        ["<leader>ziT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,intento-kanban.md<cr>", desc = "Tasks" },
-        ["<leader>zit"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,intento-kanban.md<cr>", desc = "Tasks in progress" },
-        ["<leader>zib"] = { "<cmd>:Telescope find_files find_command=zkrg,task,backlog,intento-kanban.md<cr>", desc = "Tasks backlog" },
+        ["<Leader>zi"] = { desc = "Intento" },
+        ["<Leader>zin"] = { "<cmd>:Telescope find_files find_command=zkrg,note,-,intento<cr>", desc = "Notes" },
+        ["<Leader>ziT"] = { "<cmd>:Telescope find_files find_command=zkrg,task,-,intento-kanban.md<cr>", desc = "Tasks" },
+        ["<Leader>zit"] = { "<cmd>:Telescope find_files find_command=zkrg,task,progress,intento-kanban.md<cr>", desc = "Tasks in progress" },
+        ["<Leader>zib"] = { "<cmd>:Telescope find_files find_command=zkrg,task,backlog,intento-kanban.md<cr>", desc = "Tasks backlog" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
